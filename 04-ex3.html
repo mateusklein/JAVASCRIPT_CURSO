@@ -1,0 +1,40 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html>
+    <head>
+        <title>pagina de exemplo de estrutura</title>
+        <meta charset="utf-8">
+        <meta name="author" content="mateus klein">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>estrutura basica</h1>
+        <div id="output"></div>
+    </body>
+    <script>
+            var nomes = new Array("Lapis", "Borracha", "Caneta", "Papel");
+            var preco = new Array(1.2, 1.5, 2, 1);
+            var qtd = new Array(20, 10, 15, 5);
+            var produtos = new Array();
+            var msg = "";
+
+            for(var i=0; i<nomes.length; i++){
+                var produto = new Object();
+                produto.nome = nomes[i];
+                produto.preco = preco[i];
+                produto.qtd = qtd[i];
+                produtos.push(produto);
+                msg += "Nome produto " + (i+1) + ": " + produto.nome + "<br>";
+                msg += "Preco produto " + (i+1) + ": " + produto.preco + "<br>";
+                msg += "Qtd estoque produto " + (i+1) + ": " + produto.qtd + "<br>";
+                msg += "<br><br>";
+            }
+
+            document.querySelector("#output").innerHTML = msg;
+    </script> 
+</html>

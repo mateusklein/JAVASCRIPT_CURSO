@@ -1,0 +1,37 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html>
+    <head>
+        <title>pagina de exemplo de estrutura</title>
+        <meta charset="utf-8">
+        <meta name="author" content="mateus klein">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>estrutura basica</h1>
+        <div id="output"></div>
+    </body>
+    <script>
+        var nomes = new Array("Maria", "Joao", "Ana");
+        var email = new Array("maria@gmail.com", "joao123@hotmail.com", "anaaa@terra.com");
+        var msg = "";
+        var usuarios = new Array();
+
+        for(var i=0; i<nomes.length; i++){
+            var usuario = new Object();
+            usuario.nome = nomes[i];
+            usuario.email = email[i];
+            usuarios.push(usuario);
+            msg += "Nome usuario " + (i+1) + ": " + usuario.nome + "<br>";
+            msg += "Email usuario " + (i+1) + ": " + usuario.email + "<br>";
+            msg += "<br><br>";
+        }
+
+        document.querySelector("#output").innerHTML = msg;
+    </script> 
+</html>

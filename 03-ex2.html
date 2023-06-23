@@ -1,0 +1,30 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html>
+    <head>
+        <title>pagina de exemplo de estrutura</title>
+        <meta charset="utf-8">
+        <meta name="author" content="mateus klein">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>estrutura basica</h1>
+
+        <div id="output"></div>
+    </body> 
+    <script>
+        var arr = new Array(25, 2, 45, 1, 0, 4, 5, 9);
+        var soma = 0;
+        for(var i=0; i<arr.length; i++){
+            if(!isNaN(arr[i]) && arr[i]%2==0){
+                soma += arr[i];
+            }
+        }
+        alert("a soma é: " + soma);
+    </script>
+</html>
