@@ -1,0 +1,47 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html>
+    <head>
+        <title>pagina de exemplo de estrutura</title>
+        <meta charset="utf-8">
+        <meta name="author" content="mateus klein">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>estrutura basica</h1>
+        <div id="output"></div>
+    </body>
+    <script>
+            function calc_media(){
+                var i=0;
+                var soma = 0;
+                while(typeof arguments[i] === "number"){
+                    soma += arguments[i];
+                    i++;
+                }
+                return (soma/i);
+            }
+            function calc_media_arr(arr){
+                var i=0;
+                var soma = 0;
+                while(arr[i]!=null){
+                    soma += arr[i];
+                    i++;
+                }
+                return (soma/i);
+            }
+            function main(){
+                var arr = new Array(7,8,6,4,2);
+                var media = calc_media(7,8,6,4,2);
+                var media1 = calc_media_arr(arr);
+                console.log("MÉDIA É (usando arguments):" + media);
+                console.log("MÉDIA É (usando array):" + media1);
+            }
+            main();
+    </script> 
+</html>
