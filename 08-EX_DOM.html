@@ -1,0 +1,31 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html>
+    <head>
+        <title>pagina de exemplo de estrutura</title>
+        <meta charset="utf-8">
+        <meta name="author" content="mateus klein">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>CURSO JAVASCRIPT EXEMPLOS</h1>
+        <input type="text" id="txtNome">
+        <button onclick="escreve()">Só clica</button>
+        <div id="msg"></div>
+        <div id="msg2"></div>
+        
+        <script>
+            var txtNome2 = document.querySelector("#txtNome");
+            function escreve(){
+                var nome = txtNome2.value;
+                document.querySelector("#msg").innerHTML = "bem vindo, <b>" + nome  + "</b> usando innerHTML";
+                document.querySelector("#msg2").textContent = "bem vindo, <b>" + nome  + "</b> usando textcontent";
+            }
+        </script>
+    </body>
+</html>
