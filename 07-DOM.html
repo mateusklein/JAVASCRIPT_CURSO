@@ -1,0 +1,33 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html>
+    <head>
+        <title>pagina de exemplo de estrutura</title>
+        <meta charset="utf-8">
+        <meta name="author" content="mateus klein">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>javascript dom</h1>
+        <main class="cmain" id="idmain">
+            <h2>subtitulo</h2>
+            <p id="pmain">ajsdadakjdio aioshd iash ioaj ihqwoihwqeioehqoi hqwoiehqwoi hqqiwq oiehq iohqwio hqwoiehq qoiqoihewoiq</p>
+        </main>
+        <section class="csection" id="idsection">
+            <h3>subtitulo</h3>
+            <p id="psection" class="paragrafos">ajsdadakjdio aioshd iash ioaj ihqwoihwqeioehqoi hqwoiehqwoi hqqiwq oiehq iohqwio hqwoiehq qoiqoihewoiq</p>
+            <p id="psection" class="paragrafos">ajsdadakjdio aioshd iash ioaj ihqwoihwqeioehqoi hqwoiehqwoi hqqiwq oiehq iohqwio hqwoiehq qoiqoihewoiq</p>
+        </section>
+    </body>
+    <script>
+            document.getElementById("psection").textContent = "texto alterado";
+            document.getElementsByClassName("paragrafos")[1].textContent = "texto dos paragrafos alterados";
+            document.getElementsByTagName("h3")[0].textContent = "SUBTITULO AGORA É ASSIM";
+            document.querySelector("#cmain h2").textContent = "SUBTITULO AGORA É ASSIM";
+    </script> 
+</html>
