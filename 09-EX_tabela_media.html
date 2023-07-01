@@ -7,6 +7,7 @@
         <meta name="author" content="mateus klein">
         <meta name="description" content="lista de documentos">
         <meta name="keywords" content="html5, tecnologia">
+        <script src="01-calcula_media.js"></script>
 
         <style>
 
@@ -18,7 +19,7 @@
         <section>
             <div class="container">
                 <h2>Média dos alunos</h2>
-                <table class="table">
+                <table class="tabela js-tabela">
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -76,7 +77,36 @@
         </section>
 
         <script>
-            
+            function pegaNota(td){
+                return parseFloat(td.textContent);
+            }
+
+            function recuperarNumerosDeColunas(tds){
+                var x=0;
+                var arr = [];
+                while(tds[x]){
+                    if(!isNaN(tds[x].textContent) && tds[x].textContent != ""){
+                        arr.push(parseFloat(tds[x].textContent));
+                    }
+                    x++;
+                }
+                return arr;
+            }
+
+            var trs = document.querySelectorAll(".js-tabela tbody .aluno");
+            var x=0;
+            while(trs[x]){
+                var linhaAluno = trs[x];
+                var media;
+                var tds = linhaAluno.querySelectorAll("td")
+                var notas = recuperarNumerosDeColunas(tds);
+                
+                media = calcula_media.apply(this, notas);
+
+                linhaAluno.querySelector(".alunom").textContent = media;
+
+                x++;
+            }
         </script>
     </body>
 </html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<!--doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html>
+    <head>
+        <title>pagina de exemplo de estrutura</title>
+        <meta charset="utf-8">
+        <meta name="author" content="mateus klein">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>CURSO JAVASCRIPT EXEMPLOS</h1>
+        <main class="cmain" id="idmain">
+            <h2>subtitulo</h2>
+            <p id="pmain">ajsdadakjdio aioshd iash ioaj ihqwoihwqeioehqoi hqwoiehqwoi hqqiwq oiehq iohqwio hqwoiehq qoiqoihewoiq</p>
+            <p id="psection" class="paragrafos">ajsdadakjdio aioshd iash ioaj ihqwoihwqeioehqoi hqwoiehqwoi hqqiwq oiehq iohqwio hqwoiehq qoiqoihewoiq</p>
+            <p id="psection" class="paragrafos">ajsdadakjdio aioshd iash ioaj ihqwoihwqeioehqoi hqwoiehqwoi hqqiwq oiehq iohqwio hqwoiehq qoiqoihewoiq</p>
+        </main>
+        <section class="csection" id="idsection">
+            <h3>subtitulo</h3>
+            <p id="psection" class="paragrafos">ajsdadakjdio aioshd iash ioaj ihqwoihwqeioehqoi hqwoiehqwoi hqqiwq oiehq iohqwio hqwoiehq qoiqoihewoiq</p>
+            <p id="psection" class="paragrafos">ajsdadakjdio aioshd iash ioaj ihqwoihwqeioehqoi hqwoiehqwoi hqqiwq oiehq iohqwio hqwoiehq qoiqoihewoiq</p>
+            <p id="psection" class="paragrafos">ajsdadakjdio aioshd iash ioaj ihqwoihwqeioehqoi hqwoiehqwoi hqqiwq oiehq iohqwio hqwoiehq qoiqoihewoiq</p>
+            <p id="psection" class="paragrafos">ajsdadakjdio aioshd iash ioaj ihqwoihwqeioehqoi hqwoiehqwoi hqqiwq oiehq iohqwio hqwoiehq qoiqoihewoiq</p>
+
+        </section>
+    </body>
+    <script>
+        var paragrafos = document.querySelectorAll("p");
+        var x=0;
+
+        while(paragrafos[x]){
+            paragrafos[x].textContent = "paragrafo alterado";
+            x++;
+        }
+    </script> 
+</html>
